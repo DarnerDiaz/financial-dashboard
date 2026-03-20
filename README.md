@@ -4,7 +4,7 @@
 
 **Dashboard profesional en tiempo real para análisis de criptomonedas con gráficos interactivos**
 
-[![Version](https://img.shields.io/badge/Version-2.1.0-blue)](https://github.com/DarnerDiaz/financial-dashboard/releases)
+[![Version](https://img.shields.io/badge/Version-2.2.0-blue)](https://github.com/DarnerDiaz/financial-dashboard/releases)
 [![Next.js](https://img.shields.io/badge/Next.js-16.1-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-blue)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
