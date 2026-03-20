@@ -20,7 +20,7 @@
 
 ## 🚀️ Demo en Vivo
 
-**[▶️ Abre la aplicación en vivo aquí](https://financial-dashboard-7r859iws2-darnerdiazu-9004s-projects.vercel.app)** ⚡
+**[▶️ Abre la aplicación en vivo aquí](https://financial-dashboard-m96hmq2n5-darnerdiazu-9004s-projects.vercel.app)** ⚡
 
 👉 **Pruébalo ahora**: No requiere login - comienza a analizar criptomonedas inmediatamente
 
