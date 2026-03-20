@@ -29,32 +29,44 @@ export default function Home() {
   }, [selectedCrypto, fetchPriceHistory]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-black">
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         {/* Hero Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white shadow-lg">
-            <div className="flex items-center gap-3 mb-2">
-              <BarChart3 size={24} />
-              <span className="text-sm font-semibold opacity-90">Live Data</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="group relative rounded-2xl overflow-hidden p-8 text-white shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-500 group-hover:from-blue-500 group-hover:to-cyan-400 transition-all duration-300"></div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 bg-white blur-2xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-2">
+                <BarChart3 size={24} />
+                <span className="text-sm font-semibold">Live Data</span>
+              </div>
+              <p className="text-sm opacity-90">Real-time market information</p>
             </div>
-            <p className="text-sm opacity-80">Real-time market information</p>
           </div>
-          <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl p-6 text-white shadow-lg">
-            <div className="flex items-center gap-3 mb-2">
-              <Zap size={24} />
-              <span className="text-sm font-semibold opacity-90">Fast</span>
+          <div className="group relative rounded-2xl overflow-hidden p-8 text-white shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-400 transition-all duration-300"></div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 bg-white blur-2xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-2">
+                <Zap size={24} />
+                <span className="text-sm font-semibold">Fast</span>
+              </div>
+              <p className="text-sm opacity-90">Instant price updates</p>
             </div>
-            <p className="text-sm opacity-80">Instant price updates</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white shadow-lg">
-            <div className="flex items-center gap-3 mb-2">
-              <Shield size={24} />
-              <span className="text-sm font-semibold opacity-90">Reliable</span>
+          <div className="group relative rounded-2xl overflow-hidden p-8 text-white shadow-2xl hover:shadow-violet-500/20 transition-all duration-300">
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-600 to-indigo-500 group-hover:from-violet-500 group-hover:to-indigo-400 transition-all duration-300"></div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300 bg-white blur-2xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-2">
+                <Shield size={24} />
+                <span className="text-sm font-semibold">Reliable</span>
+              </div>
+              <p className="text-sm opacity-90">Powered by CoinGecko API</p>
             </div>
-            <p className="text-sm opacity-80">Powered by CoinGecko API</p>
           </div>
         </div>
 
@@ -62,20 +74,20 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Lado izquierdo: Lista de Criptomonedas */}
           <div className="lg:col-span-2">
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm">
-              <div className="px-6 py-6 border-b border-gray-200 dark:border-slate-700">
+            <div className="backdrop-blur-xl bg-white/10 dark:bg-slate-800/30 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-2xl overflow-hidden">
+              <div className="px-8 py-8 border-b border-white/10 dark:border-slate-700/30 bg-gradient-to-r from-blue-500/5 to-cyan-500/5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 dark:from-blue-200 dark:via-cyan-200 dark:to-white bg-clip-text text-transparent">
                       Top 15 Cryptocurrencies
                     </h2>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-gray-400 dark:text-gray-300 mt-2 font-medium">
                       Market leaders ranked by market cap
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-8">
                 <CryptoList />
               </div>
             </div>

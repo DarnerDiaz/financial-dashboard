@@ -30,14 +30,14 @@ export function Header() {
 
   if (!mounted) {
     return (
-      <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/60 border-b border-white/10 shadow-2xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg">
                 ₿ Crypto Dashboard
               </h1>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <p className="text-sm text-gray-300 mt-2 font-semibold">
                 Real-time cryptocurrency analytics
               </p>
             </div>
@@ -48,33 +48,33 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/60 border-b border-white/10 shadow-2xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex justify-between items-center">
           <div className="flex-1">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg">
               ₿ Crypto Dashboard
             </h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-              Real-time cryptocurrency analytics & portfolio management
+            <p className="text-sm text-gray-300 mt-2 font-semibold">
+              Real-time analytics & portfolio management
             </p>
           </div>
 
           <div className="flex items-center gap-4">
             {/* Quick Price Display */}
-            <div className="hidden md:flex gap-4 px-4 border-l border-gray-200 dark:border-slate-700">
+            <div className="hidden md:flex gap-6 px-6 border-l border-white/10 backdrop-blur-sm">
               {btcPrice && (
-                <div className="text-right">
-                  <p className="text-xs text-gray-500 dark:text-gray-400">BTC</p>
-                  <p className="text-sm font-bold text-gray-900 dark:text-white">
+                <div className="text-right group">
+                  <p className="text-xs text-cyan-300 font-bold tracking-wider">BTC</p>
+                  <p className="text-lg font-black text-white group-hover:text-cyan-300 transition-colors duration-200">
                     ${btcPrice.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                   </p>
                 </div>
               )}
               {ethPrice && (
-                <div className="text-right">
-                  <p className="text-xs text-gray-500 dark:text-gray-400">ETH</p>
-                  <p className="text-sm font-bold text-gray-900 dark:text-white">
+                <div className="text-right group">
+                  <p className="text-xs text-blue-300 font-bold tracking-wider">ETH</p>
+                  <p className="text-lg font-black text-white group-hover:text-blue-300 transition-colors duration-200">
                     ${ethPrice.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                   </p>
                 </div>
@@ -84,10 +84,10 @@ export function Header() {
             {/* Theme Toggle */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors duration-200"
+              className="p-3 rounded-xl bg-white/10 hover:bg-white/20 text-yellow-300 transition-all duration-300 border border-white/10 hover:border-yellow-400/30 backdrop-blur-sm hover:shadow-lg hover:shadow-yellow-500/20"
               aria-label="Cambiar tema"
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === "dark" ? <Sun size={22} /> : <Moon size={22} />}
             </button>
           </div>
         </div>
