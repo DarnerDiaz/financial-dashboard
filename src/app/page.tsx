@@ -29,7 +29,7 @@ export default function Home() {
   }, [selectedCrypto, fetchPriceHistory]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-black">
+    <div className="min-h-screen bg-black">
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
@@ -71,9 +71,9 @@ export default function Home() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Lado izquierdo: Lista de Criptomonedas */}
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 gap-8">
+          {/* Top 15 Cryptocurrencies - Full Width */}
+          <div>
             <div className="backdrop-blur-xl bg-white/10 dark:bg-slate-800/30 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-2xl overflow-hidden">
               <div className="px-8 py-8 border-b border-white/10 dark:border-slate-700/30 bg-gradient-to-r from-blue-500/5 to-cyan-500/5">
                 <div className="flex items-center justify-between">
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
 
           {/* Lado derecho: Detalles y Información */}
-          <div className="space-y-8">
+          <div>
             <section className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 {selectedCrypto ? "Selected Asset" : "Choose a Crypto"}

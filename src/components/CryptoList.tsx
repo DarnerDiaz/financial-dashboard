@@ -36,11 +36,11 @@ export function CryptoList() {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {[...Array(10)].map((_, i) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="h-28 bg-gray-200 dark:bg-slate-700 rounded-lg animate-pulse"
+            className="h-48 bg-gray-800 dark:bg-slate-700 rounded-lg animate-pulse"
           />
         ))}
       </div>
@@ -48,7 +48,7 @@ export function CryptoList() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {cryptoList.map((crypto) => (
         <CryptoCard
           key={crypto.id}
