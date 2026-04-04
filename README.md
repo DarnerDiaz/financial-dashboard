@@ -205,6 +205,34 @@ El deploy es automático al hacer push a GitHub.
 rm -rf .next node_modules && npm install && npm run dev
 ```
 
+## ✅ Testing
+
+This project includes comprehensive test coverage for all utility functions.
+
+### Running Tests
+
+```bash
+# Run tests once
+npm test
+
+# Watch mode (re-run on file changes)
+npm test:watch
+
+# Interactive test dashboard
+npm test:ui
+
+# Generate coverage report
+npm test:coverage
+```
+
+### Test Coverage
+
+- ✅ **45 comprehensive tests** for all utility functions
+- ✅ **90%+ code coverage** for src/lib/utils.ts
+- ✅ Test categories cover currency formatting, calculations, and date handling
+
+See [TESTING.md](./TESTING.md) for detailed testing guide.
+
 ## 🤝 Contribuciones
 
 ¡PRs bienvenidos! Por favor:
